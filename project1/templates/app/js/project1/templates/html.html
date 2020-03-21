@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>static</title>
+    <link rel="stylesheet" href="{% static "css.css" %}" />
+
+  </head>
+  <body>
+    {% if cho %}
+        <table>
+          <head>
+            <thead>
+              <th>Date</th>
+              <th>Name</th>
+            </thead>
+            {% for i in cho%}
+            <tr>
+              <td>{{i.date}}</td>
+              <td>{{i.namme}}</td>
+            </tr>
+            {% endfor %}
+      {% else %}
+      <p>Olalala</p>
+      {% endif %}
+          </head>
+        </table>
+    <img src="{% static "1.jpg"%}" alt="adasdas">
+  </body>
+</html>

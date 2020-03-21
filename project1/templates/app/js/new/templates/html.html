@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Persons</title>
+    <!-- <link rel="stylesheet" href="{% static "css/bootstrap.css"%}"/ > -->
+  </head>
+  <body>
+    <div class="container">
+      <h1>I will show persons!</h1>
+      <form    method="post">
+        {{person.as_p}}
+        {% csrf_token%}
+        <input type="submit" name="" value="ttttt">
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% extends "app/base.html"%}
+{% load static %}
+{% block body_block%}
+<div class="jumbotron">
+
+ 
+  {% if chacker %}
+      <h1>you are registered</h1>
+    {% else %}
+    <form enctype='multipart/form-data' method="post">
+      {% csrf_token %}
+      {{ userform.as_p }}
+      {{ dataform.as_p }}
+      <input type="submit" name="" value="submit">
+    </form>
+    {% endif %}
+</div>
+{% endblock %}

@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+{% extends "app/base.html"%}
+{% block body_block%}
+<form     method="post">
+  {% csrf_token%}
+  {{ trainform.as_p }}
+  <input type="submit" name="" value="opa!">
+</form>
+
+{% endblock%}
